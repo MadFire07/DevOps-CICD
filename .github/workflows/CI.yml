@@ -26,7 +26,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Security check
-      - run: bandit -r azure-vote/main.py
+        run: bandit -r azure-vote/main.py
 
   build-and-push-image:
     runs-on: ubuntu-latest
