@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  lint-python:
+  lint-python-and-security-check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code

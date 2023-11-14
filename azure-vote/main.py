@@ -9,13 +9,13 @@ import requests
 class TestVote(unittest.TestCase):
     def get_vote(self):
         expected = 200
-        response = requests.get('http://localhost:8080')
+        response = requests.get('http://localhost:8080', timeout=5)
         actual = response.status_code
         self.assertEqual(actual, expected)
 
     def add_vote(self):
         expected = 200
-        response = requests.post('http://localhost:8080', {'vote': 'Cats'})
+        response = requests.post('http://localhost:8080', {'vote': 'Cats'}, timeout=5)
         actual = response.status_code
         self.assertEqual(actual, expected)
 
