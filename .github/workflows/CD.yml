@@ -16,4 +16,4 @@ jobs:
         run: docker-compose up -d
 
       - name: Run unit tests
-        run: docker-compose exec voting-app-azure-vote-front python manange.py test
+        run: docker-compose exec voting-app-azure-vote-front python manage.py test
