@@ -16,4 +16,4 @@ jobs:
         run: docker-compose up -d
 
       - name: Run unit tests
-        run: python /opt/voting-app/unit_tests.py
+        run: python /azure-vote/main.py
