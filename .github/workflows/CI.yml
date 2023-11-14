@@ -25,7 +25,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Security check
+      #- name: Security check
         # Run security scanning tool here (e.g., Bandit, SonarQube, etc.)
 
   build-and-push-image:
