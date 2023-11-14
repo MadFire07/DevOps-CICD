@@ -1,6 +1,5 @@
 flask==3.0.0
 flake8==6.1.0
 bandit==1.7.5
-hashicorp==0.1.1
 redis
 requests
