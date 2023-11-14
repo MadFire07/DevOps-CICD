@@ -9,7 +9,6 @@ jobs:
   deploy_and_test:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy with Docker Compose
+      - name: Launch Docker Compose
         run: docker-compose up -d
         background: true
-
