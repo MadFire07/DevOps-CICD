@@ -15,7 +15,8 @@ class TestVote(unittest.TestCase):
 
     def add_vote(self):
         expected = 200
-        response = requests.post('http://localhost:8080', {'vote': 'Cats'}, timeout=5)
+        response = requests.post('http://localhost:8080', {'vote': 'Cats'},
+                                 timeout=5)
         actual = response.status_code
         self.assertEqual(actual, expected)
 
