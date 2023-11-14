@@ -1,1 +1,6 @@
-manage.py==0.2.10
+flask==3.0.0
+anage.py==0.2.10
+flake8==6.1.0
+bandit==1.7.5
+redis
+requests
