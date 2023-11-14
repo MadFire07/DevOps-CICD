@@ -11,7 +11,7 @@ jobs:
     steps:
 
       - name: Build Docker image with Packer
-        run: packer build ansible/docker_image.json
+        run: packer build packer/docker_image.json
         if: success()
 
       - name: Docker login
