@@ -1,15 +1,19 @@
 ---
-- name: Deploy Voting App
-  hosts: your_servers
-  become: yes
+- name: Setup voting-app
+  hosts: all
+  become: true
   tasks:
-    - name: Ensure Python is installed
+    - name: Update apt package cache
+      apt:
+        update_cache: yes
+
+    - name: Ensure python is installed
       raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
 
     - name: Copy code of voting-app
-      ansible.builtin.copy:
-        src: ./azure-vote
+      git:
+        repo: https://github.com/yourusername/voting-app.git
         dest: /opt/voting-app
 
     - name: Install dependencies
-      ansible.builtin.command: pip install -r /opt/voting-app/requirements.txt
+      command: pip install -r /opt/voting-app/requirements.txt

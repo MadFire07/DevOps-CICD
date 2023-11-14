@@ -1,7 +1,0 @@
-{
-  "builders": [{
-    "type": "docker",
-    "image": "ubuntu:latest",
-    "ansible_playbook_file": "deploy.yml"
-  }]
-}
