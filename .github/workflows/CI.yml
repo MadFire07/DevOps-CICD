@@ -24,7 +24,7 @@ jobs:
 
   build-and-push-image:
     runs-on: ubuntu-latest
-    needs: [lint-python, security-check]
+    needs: [lint-python]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
