@@ -19,12 +19,6 @@ jobs:
       - name: Lint Python code
         run: flake8 azure-vote/main.py
 
-  security-check:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
       - name: Security check
         run: bandit -r azure-vote/main.py
 
